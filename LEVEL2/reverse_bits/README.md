@@ -47,20 +47,20 @@ Val  | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 If you print directly, you are going to reverse the order of the boxes respecting how they were originally in the production belt. Now index 7 becomes 0:
 
 ```
-    =====
+     =====
 Indx | 0 |
-    -----
+     -----
 Val  | 0 |
 ```
 
 Index 6 becomes 1
 
 ```
-      =========
+     =========
 Indx | 0 | 1 |
      ---------  ...
 Val  | 0 | 0 |
-      =========
+     =========
 ```
 I think you are getting the idea. You keep iterating until you reverse the full order of the boxes on the belt:
 
