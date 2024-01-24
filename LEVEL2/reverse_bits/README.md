@@ -56,11 +56,11 @@ Val  | 0 |
 Index 6 becomes 1
 
 ```
-     =========
+      =========
 Indx | 0 | 1 |
      ---------  ...
 Val  | 0 | 0 |
-     =========
+      =========
 ```
 I think you are getting the idea. You keep iterating until you reverse the full order of the boxes on the belt:
 
@@ -74,6 +74,6 @@ Val  | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |
 
 If the orther is the same how we read a number like `1441`(just kdiing :P) `42` so you know the the original orther is the oposite way.
 
-I hope you finded this interseting, please let me know if I messed somthing in this explanation.
+I hope you finded this interseting, please let me know if I messed something in this explanation.
 
 Thanks and cheers! 
