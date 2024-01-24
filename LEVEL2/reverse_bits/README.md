@@ -3,9 +3,10 @@
 ##Intro
 
 When we work with bits, we need to take into account the direction in which the most significant bit is stored, the so-called ENDIAN. I sometimes have a hard time memorizing this order, so I created two functions to visualize the direction in which these bits are stored in memory.
-What is this?
 
-In the test file, you can see that I've created two functions that print the bits from an unsigned char from left to right (L2R) and from right to left (R2L).
+##What is this?
+
+In the [test file](https://github.com/Gugor/42-Exam-rank02/edit/main/LEVEL2/reverse_bits/rev-bits-tests.c), you can see that I've created two functions that print the bits from an unsigned char from left to right (L2R) and from right to left (R2L).
 
 ```c
 void print_l2r_bits(unsigned char octet);
