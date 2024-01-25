@@ -25,9 +25,9 @@ If we pass a `\t` -it's equivalent to 9 in `ASCII`- prints (spaces are added for
  0000 1001 <=
 ```
 
-Seeing this can help you understand better how the computer stores the bits. In my case, this is printed on a macOS Catalina.
+Seeing this can help you understand better how the computer stores the bits. In my case, this rsult is printed on a macOS Catalina.
 
-The original direction of my system is from left to right, as you can see in the example. Meaning that the most significant bit is on the left.
+The original direction of my system is from left to right, as you can see in the example. Meaning that the most significant bit is on the right.
 
 ```
 0000 1001 <= (9 in base 10)
@@ -35,23 +35,33 @@ The original direction of my system is from left to right, as you can see in the
 
 How do I know what's the original direction?
 
-Well, think of a belt of a production line where on top of the line you have a bunch of boxes labeled with ordered numbers. When you shift the belt from left to right like this (myval >> 1), what you are getting first is the last bit on the right. Like this:
+Well, think of a belt in a production line where on top of the line you have a bunch of boxes labeled with ordered numbers. When you shift the belt from left to right like this (myval >> 1), what you are getting first is the last bit on the right. Like this:
 
 ```
+First state of the line
      =================================
-Indx | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+Indx | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 
      ---------------------------------
-Val  | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+Val  | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 
+     =================================
+```
+```
+State shifted right by 1 bit (belt >> 1)
+     =================================
+Indx | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | -
+     ---------------------------------
+Val  | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0
      =================================
 ```
 
-If you print directly, you are going to reverse the order of the boxes respecting how they were originally in the production belt. Now index 7 becomes 0:
+If you print what you extract from the belt, you are going to reverse the order of the boxes respecting how they were originally set in the production belt. Now the value contained in index 7 becomes the first value:
 
 ```
      =====
 Indx | 0 |
      -----
 Val  | 0 |
+     =====
 ```
 
 Index 6 becomes 1
@@ -67,14 +77,12 @@ I think you are getting the idea. You keep iterating until you reverse the full 
 
 ```
      =================================
-Indx | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+Indx | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
      ---------------------------------
 Val  | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |
      =================================
 ```
 
-If the orther is the same how we read a number like `1441`(just kdiing :P) `42` so you know the the original orther is the oposite way.
-
-I hope you finded this interseting, please let me know if I messed something in this explanation.
+I hope you finded this interseting, please let me know if I messed up something in this explanation.
 
 Thanks and cheers! 
