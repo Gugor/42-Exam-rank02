@@ -1,7 +1,7 @@
 #include "list.h"
 
 /////////////////////////////
-/// BORARRRRRRRR ////////////
+/////// STRUCT ////////////
 ////////////////////////////
 /*typedef struct s_list t_list;
 
@@ -37,6 +37,7 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 	}
 	return (head);
 }
+
 /*
 #include <stdio.h>
 int main(int ac, char **av)
@@ -70,6 +71,6 @@ int main(int ac, char **av)
 		printf("%d ", list1.data);
 		list1 = *list1.next;
 	}
-		printf("\n");
+	printf("\n");
 	return (0);
 }*/
